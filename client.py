@@ -15,7 +15,8 @@ def main():
     port = 5004
     
     #asks for user name
-    name=input("\33[34m\33[1m CREATING NEW ID:\n Enter username: \33[0m")
+    # name=input("\33[34m\33[1m CREATING NEW ID:\n Enter username: \33[0m")
+    name = "Alice"
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(2)
     
@@ -43,8 +44,10 @@ def main():
                     print('\33[31m\33[1m \rDISCONNECTED!!\n \33[0m')
                     sys.exit()
                 else :
+                    
+
                     sys.stdout.write(data.decode())
-                    display()
+                    # display()
         
             #user entered a message
             else :
